@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/settings.png') }}" type="image/x-icon">
     <title>Projects</title>
     <style>
         body {
@@ -35,7 +36,7 @@
         }
         .button-container {
             display: flex;
-            gap: 10px; /* Adjust the gap as needed */
+            gap: 10px;
         }
         
         .button {
@@ -58,12 +59,12 @@
     <div class="black-container">
         <h2>StockCounter</h2>
         <p>This app is developed in C# using .NET framework together with Linq to SQL. <br>It was meant as an app to help us keep track of our stock so we wouldn't run out of paint or other stuff.</p>
-        <a class="button" href="stockpreview" target="_blank">Open Preview</a>
+        <a class="button" href="stockpreview">Open Preview</a>
     </div>
     <div class="black-container">
         <h2>MonthlyPaymentsCalc</h2>
         <p>This app is developed in Python together with PySimpleGUI and stores data in JSON. <br>Made this app to track every monthly, quarterly and yearly payments (Subscriptions, taxes, insurance etc...).</p>
-        <a class="button" href="monthlypreview" target="_blank">Open Preview</a>
+        <a class="button" href="monthlypreview">Open Preview</a>
     </div>
     <div class="black-container">
         <h2>End-Year Project (still in development)</h2>

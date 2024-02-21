@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/envelope.png') }}" type="image/x-icon">
     <title>Contact</title>
     <style>
         body {
@@ -11,8 +12,8 @@
             color: #fff;
             font-family: Arial, sans-serif;
             display: flex;
-            flex-wrap: wrap; /* Allow wrapping to the next line if needed */
-            justify-content: space-around; /* Adjust as needed */
+            flex-wrap: wrap;
+            justify-content: space-around;
             flex-direction: column;
             align-items: center;
             justify-content: center;
@@ -31,8 +32,8 @@
             gap: 10px;
             background-color: #333;
             display: flex;
-            flex-wrap: wrap; /* Allow wrapping to the next line if needed */
-            justify-content: space-around; /* Adjust as needed */
+            flex-wrap: wrap;
+            justify-content: space-around; 
             flex-direction: row;
             padding: 20px;
             border-radius: 10px;
@@ -51,7 +52,7 @@
         }
         .button-container {
             display: flex;
-            gap: 10px; /* Adjust the gap as needed */
+            gap: 10px; 
         }
         
         .button{
@@ -74,60 +75,52 @@
     function copyToClipboard() {
         var emailButton = document.getElementById("email");
         var email = "robbert.groffi@gmail.com";
-        
-        // Create a temporary input element to copy the email to clipboard
         var tempInput = document.createElement("input");
         document.body.appendChild(tempInput);
         tempInput.setAttribute("value", email);
         tempInput.select();
         document.execCommand("copy");
         document.body.removeChild(tempInput);
-
-        // Update the button text to "Copied!"
         emailButton.textContent = "Copied!";
-
-        // Reset the button text after a short delay (you can adjust the delay as needed)
         setTimeout(function() {
             emailButton.textContent = "Copy Mail";
-        }, 2000); // 2000 milliseconds (2 seconds) delay in this example
+        }, 2000);
     }
     function copyToClipboardNum() {
         var phoneButton = document.getElementById("phone");
         var phoneNumber = "+32 484 53 49 48";
-        
-        // Create a temporary input element to copy the phone number to clipboard
         var tempInput = document.createElement("input");
         document.body.appendChild(tempInput);
         tempInput.setAttribute("value", phoneNumber);
         tempInput.select();
         document.execCommand("copy");
         document.body.removeChild(tempInput);
-
-        // Update the button text to "Copied!"
         phoneButton.textContent = "Copied!";
-
-        // Reset the button text after a short delay (you can adjust the delay as needed)
         setTimeout(function() {
             phoneButton.textContent = "Copy Phone";
-        }, 2000); // 2000 milliseconds (2 seconds) delay in this example
+        }, 2000);
     }
 </script>
 <body>
     <div class="grey-container">
-    <div class="black-container">
-        <h2>LinkedIn</h2>
-        <a class="button" href="https://www.linkedin.com/in/robbert-groffi-a4b089289/" target="_blank">My LinkedIn</a>
-    </div>
-    <div class="black-container">
-        <h2 id="emailHeader">Mail</h2>
-        <p>robbert.groffi@gmail.com</p>
-        <a class="button" href="#" onclick="copyToClipboard()" id="email">Copy Mail</a>
-    </div>
-    <div class="black-container">
-        <h2>Phone</h2>
-        <p>+32 484 53 49 48</p>
-        <a class="button" href="#" onclick="copyToClipboardNum()" id= "phone">Copy Phone</a>
-    </div>
+        <div class="black-container">
+            <h2>LinkedIn</h2>
+            <a class="button" href="https://www.linkedin.com/in/robbert-groffi-a4b089289/" target="_blank">My LinkedIn</a>
+        </div>
+        <div class="black-container">
+            <h2 id="emailHeader">Mail</h2>
+            <p>robbert.groffi@gmail.com</p>
+            <a class="button" href="#" onclick="copyToClipboard()" id="email">Copy Mail</a>
+        </div>
+        <div class="black-container">
+            <h2>Phone</h2>
+            <p>+32 484 53 49 48</p>
+            <a class="button" href="#" onclick="copyToClipboardNum()" id= "phone">Copy Phone</a>
+        </div>
+        <div class="black-container">
+            <h2>Look at my resume</h2>
+            <a class="button" href="{{ url_for('static', filename='files/CV_R_G.pdf') }}" target="_blank">My Resume</a>
+        </div>
     </div>
     <p>Feel free to drop me a message anytime, I'm looking forward to hearing from you!</p>
     <div class="button-container">

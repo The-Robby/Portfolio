@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/search.png') }}" type="image/x-icon">
     <title>Preview</title>
     <style>
         body {
@@ -24,16 +25,6 @@
             border-radius: 10px;
             text-align: center;
         }
-        h2 {
-            font-size: 50px;
-        }
-
-        h1, h2 {
-            margin-top: 0px;
-            text-align: center; /* Center-align text */
-        }
-
-
         .button {
             background-color: #ff9900;
             color: #fff;
@@ -43,7 +34,6 @@
             border-radius: 10px;
             cursor: pointer;
         }
-
         .button:hover {
             background-color: #e68a00;
             border-color: #b36600;
@@ -53,6 +43,7 @@
 <body>
     <div class = "black-container">
         <img src="{{ url_for('static', filename='images/stockcounterpreview.png') }}" alt="StockCounter App" style="width: 100%; height: auto;">
-
+    </div>
+    <a class="button" href="projects">Go Back</a>
 </body>
 </html>

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/search.png') }}" type="image/x-icon">
     <title>Preview</title>
     <style>
         body {
@@ -24,20 +25,12 @@
             border-radius: 10px;
             text-align: center;
         }
-        h2 {
-            font-size: 50px;
-        }
-
-        h1, h2 {
-            margin-top: 0px;
-            text-align: center; /* Center-align text */
-        }
         .grey-container{
             gap: 10px;
             background-color: #333;
             display: flex;
-            flex-wrap: wrap; /* Allow wrapping to the next line if needed */
-            justify-content: space-around; /* Adjust as needed */
+            flex-wrap: wrap; 
+            justify-content: space-around;
             flex-direction: row;
             padding: 20px;
             border-radius: 10px;
@@ -80,6 +73,7 @@
             <img src="{{ url_for('static', filename='images/checkscreen.png') }}" alt="StockCounter App" style="width: 100%; height: auto;">
         </div>
     </div>
+    <a class="button" href="projects">Go Back</a>
 
 </body>
 </html>

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/user.png') }}" type="image/x-icon">
     <title>My info</title>
     <style>
         body {
@@ -37,8 +38,8 @@
             gap: 10px;
             background-color: black;
             display: flex;
-            flex-wrap: wrap; /* Allow wrapping to the next line if needed */
-            justify-content: space-around; /* Adjust as needed */
+            flex-wrap: wrap; 
+            justify-content: space-around; 
             flex-direction: row;
             padding: 20px;
             border-radius: 10px;
@@ -54,7 +55,7 @@
         }
         .button-container {
             display: flex;
-            gap: 10px; /* Adjust the gap as needed */
+            gap: 10px;
         }
         
         .button {
@@ -111,47 +112,36 @@
                 <h2>Robbert Groffi</h2>
             </div>
             <div class="invisible-container">
-                <!-- Attribute 1 -->
                 <div class="attribute">
                     <span>Python:</span>
                     <div class="bar-container">
                         <div class="bar" style="width: 90%;"></div>
                     </div>
                 </div>
-
-                <!-- Attribute 2 -->
                 <div class="attribute">
                     <span>C#:</span>
                     <div class="bar-container">
                         <div class="bar" style="width: 85%;"></div>
                     </div>
                 </div>
-
-                <!-- Attribute 3 -->
                 <div class="attribute">
                     <span>C++:</span>
                     <div class="bar-container">
                         <div class="bar" style="width: 70%;"></div>
                     </div>
                 </div>
-
-                <!-- Attribute 4 -->
                 <div class="attribute">
                     <span>SQL:</span>
                     <div class="bar-container">
                         <div class="bar" style="width: 85%;"></div>
                     </div>
                 </div>
-
-                <!-- Attribute 5 -->
                 <div class="attribute">
                     <span>HTML:</span>
                     <div class="bar-container">
                         <div class="bar" style="width: 30%;"></div>
                     </div>
                 </div>
-
-                <!-- Attribute 6 -->
                 <div class="attribute">
                     <span>CSS:</span>
                     <div class="bar-container">
