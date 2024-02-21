@@ -25,6 +25,26 @@
             border-radius: 10px;
             text-align: center;
         }
+        .invisible-container {
+            width: 300px;
+            background-color: black;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .grey-container{
+            gap: 10px;
+            background-color: black;
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping to the next line if needed */
+            justify-content: space-around; /* Adjust as needed */
+            flex-direction: row;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
         h2 {
             margin-top: 0px;
             font-size: 24px;
@@ -51,9 +71,95 @@
             background-color: #e68a00;
             border-color: #b36600;
         }
+        #profile-box {
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+
+        #profile-pic {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+
+        .attribute {
+            margin-top: 15px;
+            text-align: left;
+        }
+
+        .bar-container {
+            height: 20px;
+            background-color: #eee;
+            border-radius: 5px;
+            margin-top: 5px;
+            overflow: hidden;
+        }
+
+        .bar {
+            height: 100%;
+            background-color: #4CAF50;
+        }
     </style>
 </head>
 <body>
+    <div class="grey-container">
+            <div class="invisible-container">    
+                <img src="{{ url_for('static', filename='images/pfpic.jpg') }}" alt="Profile Pic" style="width: 100%; height: auto;">
+                <h2>Robbert Groffi</h2>
+            </div>
+            <div class="invisible-container">
+                <!-- Attribute 1 -->
+                <div class="attribute">
+                    <span>Python:</span>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 90%;"></div>
+                    </div>
+                </div>
+
+                <!-- Attribute 2 -->
+                <div class="attribute">
+                    <span>C#:</span>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 85%;"></div>
+                    </div>
+                </div>
+
+                <!-- Attribute 3 -->
+                <div class="attribute">
+                    <span>C++:</span>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 70%;"></div>
+                    </div>
+                </div>
+
+                <!-- Attribute 4 -->
+                <div class="attribute">
+                    <span>SQL:</span>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 85%;"></div>
+                    </div>
+                </div>
+
+                <!-- Attribute 5 -->
+                <div class="attribute">
+                    <span>HTML:</span>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 30%;"></div>
+                    </div>
+                </div>
+
+                <!-- Attribute 6 -->
+                <div class="attribute">
+                    <span>CSS:</span>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 15%;"></div>
+                    </div>
+                </div>
+            </div>
+    </div>
     <div class="black-container">
     <h2>I am a Developer</h2>
     <p>I am fluent in C++, C# and in Python. Recently I learned how to create websites using Flask, HTML and CSS in my evening course. 
