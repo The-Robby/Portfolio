@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
+
 
 @app.route('/')
 def home():
@@ -21,6 +22,14 @@ def experience():
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
+
+@app.route('/stockpreview')
+def stockpreview():
+    return render_template('stockpreview.html')
+
+@app.route('/monthlypreview')
+def monthlypreview():
+    return render_template('monthlypreview.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
