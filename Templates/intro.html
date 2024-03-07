@@ -12,7 +12,10 @@
         <h1>Robbert Groffi</h1>
         <h2>Hello, welcome to my portfolio website!<br>Take your time while getting to know me!</h2>    
     </div>
-    <a class="button" href="info">Explore me!</a>
+    <div class = "button-container">
+        <a class="button" href="info">Explore me!</a>
+        <a class="button" href="{{ url_for('static', filename='files/CV_R_G.pdf') }}" target="_blank">My Resume</a>
+    </div>
 
 </body>
 </html>
